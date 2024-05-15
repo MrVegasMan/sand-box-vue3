@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "ignoreFiles": [
+    "dist/*.css",
+    ".output/*.css",
+    ".nuxt/*.css"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.scss",
+        "**/*.scss"
+      ],
+      "extends": [
+        "stylelint-config-standard-scss"
+      ]
+    },
+    {
+      "files": [
+        "*.vue",
+        "**/*.vue"
+      ],
+      "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-standard-vue/scss"
+      ]
+    }
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "scss/no-global-function-names": null,
+    "media-query-no-invalid": null,
+    "selector-class-pattern": "^.*$",
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "ignoreShorthands": [
+          "/grid/"
+        ]
+      }
+    ]
+  }
+}

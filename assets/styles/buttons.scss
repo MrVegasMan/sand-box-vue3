@@ -1,0 +1,27 @@
+a, button {
+  transition: $var-base-animation-time $var-transition-timing;
+  cursor: pointer;
+}
+
+
+.button-master {
+  color: #010101;
+  background-color: #FFF;
+
+  &:hover {
+    color: #77FE53;
+    background-color: #F37;
+  }
+
+  &:active {
+
+  }
+
+  &:focus {
+
+  }
+
+  &:disabled {
+
+  }
+}

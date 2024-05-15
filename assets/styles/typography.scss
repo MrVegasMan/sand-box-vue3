@@ -1,0 +1,41 @@
+.h1 {
+  font-family: $font-common;
+  font-weight: 500;
+  font-size: rem(60);
+  line-height: 100%;
+  letter-spacing: -0.04em;
+
+  @include mobile-576 {
+    font-size: 40px;
+  }
+}
+
+.h2 {
+  font-family: $font-common;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 61.6px;
+  letter-spacing: -0.02em;
+
+  @include mobile-576 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 35.2px;
+  }
+}
+
+.body-caption {
+  font-family: $font-common;
+}
+
+.body {
+  font-family: $font-common;
+  font-weight: 400;
+  font-size: rem(20);
+  line-height: rem(26);
+
+  @include mobile-576 {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+}

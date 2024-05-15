@@ -1,0 +1,6 @@
+dist/*
+dist
+.output
+dist-ssr
+shims-vue.d.ts
+typed-router.d
