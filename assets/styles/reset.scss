@@ -22,7 +22,7 @@ time, mark, audio, video {
   @include desktop-1440 {
     font-size: 1.111vw;
   }
-  
+
 }
 
 *, *::before, *::after {
@@ -30,7 +30,7 @@ time, mark, audio, video {
 }
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section, span {
   display: block;
 }
 
@@ -58,6 +58,7 @@ table {
 
 a {
   color: currentcolor;
+  text-decoration: none;
 }
 
 button {

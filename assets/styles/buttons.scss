@@ -1,16 +1,22 @@
 a, button {
   transition: $var-base-animation-time $var-transition-timing;
   cursor: pointer;
+  background-color: transparent;
+  color: currentColor;
+
 }
 
 
 .button-master {
-  color: #010101;
-  background-color: #FFF;
+  color: var(--color-bg-black);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+  padding: 10px;
+  border-radius: 4px;
 
   &:hover {
-    color: #77FE53;
-    background-color: #F37;
+    color: var(--color-white);
+    background-color: var(--color-bg-black);
   }
 
   &:active {

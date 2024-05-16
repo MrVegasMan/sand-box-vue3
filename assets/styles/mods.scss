@@ -1,3 +1,13 @@
+.ico-24 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.rotate-180 {
+  transform: rotateY(180deg);
+}
+
 .position-relative {
   position: relative;
 }
