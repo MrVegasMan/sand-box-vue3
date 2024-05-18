@@ -26,5 +26,7 @@ import { menuData } from '~/components/Layout/menu.data';
 </script>
 
 <style lang="scss">
-
+.test {
+  color: #FFF;
+}
 </style>

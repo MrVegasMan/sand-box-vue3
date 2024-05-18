@@ -16,8 +16,14 @@
         />
       </span>
     </button>
+    <PrimeButton label="asdsad"
+                 class="test-btn"
+    />
+
+    <PrimeAutoComplete />
 
     <LayoutMenu />
+    <PrimeCalendar />
   </aside>
 </template>
 <script setup lang="ts">
@@ -49,4 +55,6 @@
     }
   }
 }
+
+
 </style>

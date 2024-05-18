@@ -82,7 +82,9 @@ export default defineNuxtConfig({
         '@nuxt/fonts',
         'nuxt-svgo',
         'nuxt-icon',
+        'nuxt-primevue',
         [
+
             'nuxt-swiper',
             {
                 modules: ['navigation', 'pagination'],
@@ -151,6 +153,15 @@ export default defineNuxtConfig({
         ],
         'nuxt-typed-router'
     ],
+    primevue: {
+        /* Options */
+        components: {
+            prefix: 'Prime',
+            include: '*',
+            exclude: []
+        }
+
+    },
     image: {
         // dir: 'assets/images',
         densities: [1, 2],
