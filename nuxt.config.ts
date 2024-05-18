@@ -81,6 +81,7 @@ export default defineNuxtConfig({
         '@nuxtjs/color-mode',
         '@nuxt/fonts',
         'nuxt-svgo',
+        'nuxt-icon',
         [
             'nuxt-swiper',
             {

@@ -5,7 +5,13 @@
               :to="item.url"
               class="display-flex body align-items-center"
     >
-      <span class="menu-dot"></span>
+      <Icon :name="item.icon"
+            size="18"
+            class="menu-dot"
+      />
+
+      <component :is="item.icon2" />
+
       <span>
         {{ item.name }}
       </span>
@@ -20,10 +26,6 @@ import { menuData } from '~/components/Layout/menu.data';
 
 <style lang="scss">
 .menu-dot {
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
   margin-right: 5px;
-  background-color: var(--color-purple);
 }
 </style>

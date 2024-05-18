@@ -10,8 +10,10 @@
     <button type="button"
             class="button-back"
     >
-      <span class="ico-24 rotate-180">
-        <SVGIconArrowLR />
+      <span>
+        <Icon name="line-md:logout"
+              size="24"
+        />
       </span>
     </button>
 
@@ -23,7 +25,7 @@
 </script>
 <style scoped lang="scss">
 .sidebar {
-  padding: 24px;
+  padding: 44px 24px;
 }
 
 .home-link {
@@ -43,7 +45,7 @@
 
   &:hover {
     & svg {
-      transform: translateX(-5px);
+      transform: translateX(5px);
     }
   }
 }
