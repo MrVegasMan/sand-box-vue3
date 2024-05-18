@@ -8,7 +8,7 @@
               <SVGIconLogoIco />
             </span> cheap
           </h1>
-          <p class="body">
+          <p class="p-body">
             All the offers and discounts on items from your favorite games, all in one spot
           </p>
         </div>
