@@ -1,0 +1,39 @@
+@mixin typography-style($font-weight, $font-size, $line-height, $letter-spacing: 0, $text-decoration: none) {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  text-decoration: $text-decoration;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin layout($min-width, $max-width, $col-padding, $container-padding) {
+  min-width: $min-width;
+  max-width: $max-width;
+  padding: $container-padding;
+
+  .column123 {
+    padding: $col-padding;
+  }
+}
+
+@mixin theme-light {
+  --color-green: #{$colors-green};
+  --color-purple: #{$colors-purple};
+  --color-bg-black: #{$colors-bg-black};
+  --color-non-black: #{ $colors-non-black};
+  --color-white: #{$colors-white};
+}
+
+
+@mixin theme-dark {
+  --color-green: #{$colors-green};
+  --color-purple: #{$colors-purple};
+  --color-bg-black: #{$colors-bg-black};
+  --color-non-black: #{ $colors-non-black};
+  --color-white: #{$colors-white};
+}

@@ -1,0 +1,63 @@
+$breakpoint-small: 320px;
+$breakpoint-medium: 576px;
+$breakpoint-large: 768px;
+$breakpoint-x-large: 1200px;
+$breakpoint-xx-large: 1920px;
+$breakpoint-mobile: 320px; // Mobile devices
+$breakpoint-tablet-portrait: 768px; // Tablets in portrait orientation
+$breakpoint-tablet-horizontal: 1024px; // Tablets in horizontal orientation
+$breakpoint-desktop: 1200px; // Desktops
+$breakpoint-x-large-max: 1440px;
+$breakpoints: (
+        'bp-xxl': $breakpoint-xx-large,
+        'bp-xl': $breakpoint-x-large,
+        'bp-xl-m': $breakpoint-x-large-max,
+        'bp-lm': $breakpoint-tablet-horizontal,
+        'bp-l': $breakpoint-large,
+        'bp-m': $breakpoint-medium,
+        'bp-s': $breakpoint-small
+);
+
+/* - от этого разрешения и ниже - */
+
+@mixin desktop-1920 {
+  @media (max-width: map-get($breakpoints, bp-xxl)) {
+    @content
+  }
+}
+
+@mixin desktop-1440 {
+  @media (max-width: map-get($breakpoints, bp-xl-m)) {
+    @content
+  }
+}
+
+@mixin desktop-1200 {
+  @media (max-width: map-get($breakpoints, bp-xl)) {
+    @content
+  }
+}
+
+@mixin tablet-1024 {
+  @media (max-width: map-get($breakpoints, bp-lm)) {
+    @content
+  }
+}
+
+@mixin tablet-768 {
+  @media (max-width: map-get($breakpoints, bp-l)) {
+    @content
+  }
+}
+
+@mixin mobile-576 {
+  @media (max-width: map-get($breakpoints, bp-m)) {
+    @content
+  }
+}
+
+@mixin mobile-320 {
+  @media (max-width: map-get($breakpoints, bp-s)) {
+    @content
+  }
+}

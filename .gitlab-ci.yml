@@ -1,0 +1,41 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  services:
+    - docker:dind
+  variables:
+    CONTAINER_IMAGE: registry.bkxtech.com/nft-merketplace-landing:$CI_COMMIT_REF_NAME
+  script:
+    - docker pull $CONTAINER_IMAGE || true
+    - docker build --cache-from $CONTAINER_IMAGE -f Dockerfile -t $CONTAINER_IMAGE .
+    - docker push $CONTAINER_IMAGE
+  only:
+    - main
+    - dev
+
+deploy:main:
+  stage: deploy
+  environment:
+    name: main
+  script:
+    - scp ./docker-compose.nft-merketplace-landing.yml wtf1:/root/docker/front_v2
+    - ssh wtf1 "cd /root/docker/front_v2 && docker-compose -f docker-compose.nft-merketplace-landing.yml pull && exit"
+    - ssh wtf1 "cd /root/docker/front_v2 && docker-compose -f docker-compose.nft-merketplace-landing.yml up -d && exit"
+    - ssh wtf1 "docker image prune -af && exit"
+  only:
+    - main
+
+deploy:staging:
+  stage: deploy
+  environment:
+    name: staging
+  script:
+    - scp ./docker-compose.nft-merketplace-landing.dev.yml wtf_dev:/root/docker
+    - ssh wtf_dev "cd /root/docker && docker-compose -f docker-compose.nft-merketplace-landing.dev.yml pull && exit"
+    - ssh wtf_dev "cd /root/docker && docker-compose -f docker-compose.nft-merketplace-landing.dev.yml up -d && exit"
+    - ssh wtf_dev "docker image prune -af && exit"
+  only:
+    - dev
